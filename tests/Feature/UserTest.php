@@ -32,8 +32,8 @@ class UserTest extends TestCase
     {
         $user = User::all()->firstWhere("username", "Rose");
 //       echo $user -> articles();
-        echo "\n";
-        echo $user->articles;
+//        echo "\n";
+//        echo $user->articles;
         $this->assertInstanceOf(Article::class, $user->articles->first());
         $this->assertInstanceOf(Article::class, $user->articles()->first());
         $this->assertInstanceOf(Collection::class, $user->articles);
@@ -43,8 +43,8 @@ class UserTest extends TestCase
     public function test_favouritedArticles()
     {
         $user = User::all()->firstWhere("username", "Rose");
-        echo "\n";
-        echo $user->favouritedArticles;
+//        echo "\n";
+//        echo $user->favouritedArticles;
         $this->assertInstanceOf(Article::class, $user->favoritedArticles->first());
 
     }
@@ -52,16 +52,16 @@ class UserTest extends TestCase
     public function test_followers()
     {
         $user = User::all()->firstWhere("username", "Rose");
-        echo "\n";
-        echo $user->followers;
+//        echo "\n";
+//        echo $user->followers;
         $this->assertInstanceOf(User::class, $user->followers->first());
     }
 
     public function test_following()
     {
         $user = User::all()->firstWhere("username", "Rose");
-        echo "\n";
-        echo $user->following;
+//        echo "\n";
+//        echo $user->following;
         $this->assertInstanceOf(User::class, $user->following->first());
     }
 
